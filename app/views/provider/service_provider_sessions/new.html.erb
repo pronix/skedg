@@ -1,0 +1,11 @@
+<h3><%= t_view(:title) %></h3>
+<span><%= link_to t_view(:registration), provider_registration_path %></span>
+<% semantic_form_for [:provider,@provider_session] do |form| %>
+<% form.input_field_set :class => "login" do %>
+<%= form.input :login, :input_html =>{:size => 20} %>
+<%= form.input :password, :input_html =>{:size => 20} %>
+<% end %>                                                
+<% form.button_field_set do %>                                    
+<%= form.commit_button t_view(:login) %>                             
+<% end %>
+<% end %>

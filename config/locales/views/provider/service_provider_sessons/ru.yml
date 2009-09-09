@@ -1,0 +1,9 @@
+ru:
+  views:
+    provider:
+      service_provider_sessions:
+        new:
+          title: "Вход в систему"
+          login: "Вход"
+          registration: "Регистрация"
+  
