@@ -1,2 +1,4 @@
-class Provider::ServiceProvidersController < ApplicationController
+class Provider::ServiceProvidersController < Provider::ProvidersController
+  def new
+  end
 end
