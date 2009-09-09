@@ -7,11 +7,5 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
-  helper_method :t_view
-  
-  private
 
-  def t_view(val)
-    t(['views',params[:controller].gsub('/','.'),params[:action], val].join('.'))    
-  end
 end
