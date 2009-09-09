@@ -7,5 +7,11 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
-
+  private
+  
+  def t_controller(val)
+    t(["controllers", 
+       self.class.to_s.gsub('Controller','').underscore.split('/'),  
+       val].flatten.join('.'))
+  end
 end
