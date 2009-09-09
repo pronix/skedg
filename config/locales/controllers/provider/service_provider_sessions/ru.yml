@@ -1,0 +1,7 @@
+ru:
+  controllers:
+    provider:
+      service_provider_sessions:
+        notice:
+          login: Авторизация успешна
+          logout: До свидания

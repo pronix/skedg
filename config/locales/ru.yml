@@ -3,3 +3,24 @@ ru:
     errors:
       messages:
         record_invalid: "имеет неверное значение"
+  authlogic:
+    error_messages:
+      login_blank: имя не может быть пустым
+      login_not_found: не верное имя
+      login_invalid: можно использовать только буквы, числа, пробел и .-_@
+      consecutive_failed_logins_limit_exceeded: Consecutive failed logins limit exceeded, account is disabled.
+      email_invalid: не правельный email
+      password_blank: не может быть пустым
+      password_invalid: не верный
+      not_active: Ваша учетная запись не активирован
+      not_confirmed: Ваша учетная запись не подтверждена
+      not_approved: Your account is not approved
+      no_authentication_details: " "
+    models:
+      service_provider_session: Поставщики услуг
+    attributes:
+      service_provider_session:
+        login: имя
+        email: email
+        password: пароль
+        remember_me: remember me

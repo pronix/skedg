@@ -1,0 +1,7 @@
+ru:
+  layouts:
+    provider:
+      title: Поставщики услуг
+      login: Вход
+      logout: Выход
+      registration: Регистрация

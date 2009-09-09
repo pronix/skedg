@@ -1,0 +1,8 @@
+ru:
+  views:
+    provider:
+      service_providers:
+        new:
+          head: "Регистрация"
+          commit: "Создать"
+  

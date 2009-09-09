@@ -1,6 +1,7 @@
 class Provider::ProvidersController < ApplicationController
   helper_method :current_provider_session, :current_provider
   layout  "provider" 
+  
   private
   # текущая сессия поставщика услуг
   def current_provider_session
