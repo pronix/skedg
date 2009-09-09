@@ -1,17 +1,30 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
-describe Provider::ProviderSessionsController do
+describe Provider::ServiceProviderSessionsController do
 
-  #Delete these examples and add some real ones
-  it "should use Provider::ProviderSessionsController" do
-    controller.should be_an_instance_of(Provider::ProviderSessionsController)
+  describe "При заведение новой сессии GET NEW" do 
+    it "должен перенаправить на страницу выхода если пользователь авторизован"
+    it "должен создать новый экземпляр сессии"
+    it "должен передать новую сессию в шаблон"
+    it "должен отобразить шаблон авторизации поставщика new"
   end
-
-
-  describe "GET 'new'" do
-    it "should be successful" do
-      get 'new'
-      response.should be_success
+  describe "при создание новой сессии POST CREATE" do 
+    it "должен перенаправить на страницу выхода если пользователь авторизован"
+    it "должен создать новую сессию с передаваемыми параметрами"
+    describe "при верных параметра" do 
+      it "должен сохранить сессию"
+      it "должен вывести сообщение об успешной авторизации"
+      it "должен перенаправить поставщика на provider_service_providers_path"
     end
+    describe "при не верных параметрах " do 
+      it "должен вывести сообщение об ошибке"
+      it "должен повторно отобразить шаблон авторизации new"
+    end
+  end
+  describe "При удаление сессии" do 
+    it "должен перенаправить на страницу входа если пользователь не авторизован"
+    it "должен удалить сессию текущего поставщика"
+    it "должен вывести сообщение о выходе из системы"
+    it "должен перенаправить пользователя на страницу входа provider_login_path"
   end
 end
