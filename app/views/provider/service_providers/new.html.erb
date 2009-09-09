@@ -1,0 +1,18 @@
+<h3><%= t_view(:new,:head) %></h3>
+
+<% semantic_form_for [:provider, @service_provider] do |form| %>
+  <% form.input_field_set do %>
+    <%= form.input :contribution_type_id, :as => :string %>
+    <%= form.input :provider_type_id, :as => :string %>    
+    <%= form.input :name %>
+    <%= form.input :owner %>
+    <%= form.input :email %>
+    <%= form.input :phone, :required => false %>
+    <%= form.input :login %>
+    <%= form.input :password %>
+    <%= form.input :password_confirmation %>
+  <% end -%>
+  <% form.button_field_set do %>                                    
+    <%= form.commit_button t_view(:new,:commit) %>                             
+  <% end %>
+<% end %>

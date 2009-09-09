@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
   map.namespace :provider do |provider|
-    provider.login '/', :controller => :service_provider_sessions, :action => :new 
+    provider.login '/login', :controller => :service_provider_sessions, :action => :new 
     provider.logout '/logout', :controller => :service_provider_sessions, :action => :destroy
     provider.registration '/registration', :controller => :service_providers, :action => :new
     provider.resource :service_provider_sessions, :only => [:new, :create, :destroy]

@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    models:
+      service_provider: Поставщик услуг
+    attributes: 
+      service_provider:
+        contribution_type_id: Сфера деятельности
+        provider_type_id: Тип услуги
+        name: Наименование организации
+        owner: Фамилия и Имя
+        email: email
+        phone: телефон
+        login: имя входа
+        password: пароль
+        password_confirmation: повторите пароль
+
+  
