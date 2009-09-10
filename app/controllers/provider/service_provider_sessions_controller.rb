@@ -1,6 +1,7 @@
 class Provider::ServiceProviderSessionsController < Provider::ProvidersController
   before_filter :require_no_provider, :only => [:new, :create]
   before_filter :require_provider, :only => :destroy
+  
   def new
     @provider_session = ServiceProviderSession.new
   end
@@ -10,6 +11,7 @@ class Provider::ServiceProviderSessionsController < Provider::ProvidersControlle
       flash[:notice] = t_controller("notice.login")
       redirect_back_or_default provider_service_providers_path
     else
+      flash[:error] = "Регистарция не прошла"
       render :action => :new
     end   
     
